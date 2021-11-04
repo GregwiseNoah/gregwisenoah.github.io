@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-US"
 title                    : "Ashwin V George"
 title_separator          : "-"
-subtitle                 : "Wubba Lubba Dub Dub" # site tagline that appears below site title in masthead
+subtitle                 : "Is this just a simulation?" # site tagline that appears below site title in masthead
 name                     : "Ashwing V George"
 description              : "Uhhhhh"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -102,7 +102,7 @@ analytics:
 # Site Author
 author:
   name             : "Ashwin V George"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /assets/Images/pp.jepg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "The trouble with an open mind of course is that people come and try to put things in it."
   location         : "Kerala, India"
   email            :
