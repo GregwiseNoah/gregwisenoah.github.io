@@ -102,7 +102,7 @@ analytics:
 # Site Author
 author:
   name             : "Ashwin V George"
-  avatar           : /assets/Images/pp.jepg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /assets/Images/pp.jpeg
   bio              : "The trouble with an open mind of course is that people come and try to put things in it."
   location         : "Kerala, India"
   email            :
