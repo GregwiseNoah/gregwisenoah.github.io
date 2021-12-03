@@ -1,0 +1,1 @@
+Here I sit, at 11 in the night, sittig with another rejection letter. This time from RAWS, the radio astronomy winter school held by NCRA and IUCAA. Truth be told, this rejection shouldn't even hurt much, given that I'm not interested in radio astronomy as a career path but it seemed interesting enough to pursue just to satisfy my curiousity.
