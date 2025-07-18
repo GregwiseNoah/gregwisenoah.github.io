@@ -10,7 +10,7 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
+theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -20,12 +20,12 @@ title                    : "Ashwin V George"
 title_separator          : "-"
 subtitle                 : #"Is this just a simulation?" # site tagline that appears below site title in masthead
 name                     : "Ashwing V George"
-description              : #"Uhhhhh"
+description              : 'Personal website'  #"Uhhhhh"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "gregwisenoah/gregwisenoah.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/GW.gif" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : # path of logo imag  e to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -104,7 +104,7 @@ author:
   name             : "Ashwin V George"
   avatar           : /assets/Images/pp.jpeg
   bio              : "The trouble with an open mind of course is that people come and try to put things in it."
-  location         : "Kerala, India"
+  location         : "Potsdam, Germany"
   email            :
   links:
     - label: "Email"
@@ -121,7 +121,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/GregwiseNoah"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -137,7 +137,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/GregwiseNoah"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
