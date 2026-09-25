@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cold clouds in hot, turbulent gas – Ashwin Vergis George</title>
+<meta name="description" content="Simulations of whether cold gas clouds survive in the hot, turbulent gas of galaxy clusters.">
+<meta name="author" content="Ashwin Vergis George">
+<meta name="theme-color" content="#0A1024">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cold clouds in hot, turbulent gas – Ashwin Vergis George">
+<meta property="og:description" content="Simulations of whether cold gas clouds survive in the hot, turbulent gas of galaxy clusters.">
+<!-- Link previews need a full URL here once the site is online, e.g. https://yourdomain/assets/img/og-image.jpg -->
+<meta property="og:image" content="../assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/style.css">
+<script>/* Apply the saved day/night choice before the page paints */(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}document.documentElement.setAttribute("data-theme",t)})();</script>
+<script src="../js/sky.js" defer></script>
+<script src="../js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="sun" aria-hidden="true"></div>
+<header class="site-header">
+<a class="site-name" href="../index.html">Ashwin Vergis George</a>
+<nav class="site-nav" aria-label="Main"><a href="../about.html">About</a><a href="index.html" aria-current="page">Research</a><a href="../contact.html">Contact</a><button class="theme-toggle" type="button" aria-label="Switch to day mode"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></nav>
+</header>
+<main id="main" class="page">
+<div class="page-head">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Research</a></nav>
+  <h1>Cold clouds in hot, turbulent gas</h1>
+  <p class="meta">Research internship at the Max Planck Institute for Astrophysics, Garching, January to May 2025, with Dr. Max Gronke and Hitesh Kishore Das</p>
+</div>
+
+<div class="measure">
+  <p>Galaxy clusters are filled with gas at tens of millions of degrees that is constantly being stirred, yet they also hold much colder gas. A cold cloud dropped into this hot, turbulent medium tends to be torn apart. But if the gas mixing at its edge cools quickly enough, the cloud can survive and even grow by pulling hot gas onto itself.</p>
+  <p>Earlier work on clouds about 100 times denser than their surroundings found that they survive when the mixed gas cools faster than the cloud is crushed, roughly when <span class="math"><i>t</i><sub>cool,mix</sub>/<i>t</i><sub>cc</sub></span> is below 1. Clusters are hotter, so I ran 33 three-dimensional Athena++ simulations of clouds 1000 times denser than their surroundings, with turbulent Mach numbers from 0.25 to 0.75 and <span class="math"><i>t</i><sub>cool,mix</sub>/<i>t</i><sub>cc</sub></span> from 0.001 to 10.</p>
+</div>
+
+<section class="compare" data-compare aria-labelledby="h-compare">
+  <h2 id="h-compare" class="visually-hidden">Two clouds compared over time</h2>
+  <div class="compare-controls">
+    <span class="compare-label" id="compare-time">Time, <span class="math"><i>t</i>/<i>t</i><sub>eddy</sub></span></span>
+    <div class="segmented" role="group" aria-labelledby="compare-time">
+      <button type="button" data-step-button aria-pressed="true">0.2</button>
+      <button type="button" data-step-button aria-pressed="false">3.2</button>
+      <button type="button" data-step-button aria-pressed="false">6.7</button>
+    </div>
+    <button type="button" class="button compare-play" data-play>Play</button>
+    <span class="visually-hidden" aria-live="polite" data-compare-status></span>
+  </div>
+  <div class="compare-grid">
+    <figure>
+      <div class="stack" role="img" aria-label="Projected density of a cloud with t cool,mix over t cc equal to 1: a compact cloud breaks into fragments and is gone by the last snapshot.">
+          <img src="../assets/img/cloud-destroyed-t02.jpg" width="800" height="800" alt="" class="is-active" loading="eager">
+          <img src="../assets/img/cloud-destroyed-t32.jpg" width="800" height="800" alt="" loading="lazy">
+          <img src="../assets/img/cloud-destroyed-t67.jpg" width="800" height="800" alt="" loading="lazy">
+      </div>
+      <figcaption>The cloud is destroyed<span class="muted"><span class="math"><i>t</i><sub>cool,mix</sub>/<i>t</i><sub>cc</sub></span> = 1</span></figcaption>
+    </figure>
+    <figure>
+      <div class="stack" role="img" aria-label="Projected density of a cloud with t cool,mix over t cc equal to 0.01: the cloud fragments, then grows into large filaments of cold gas across the box.">
+          <img src="../assets/img/cloud-grows-t02.jpg" width="800" height="800" alt="" class="is-active" loading="eager">
+          <img src="../assets/img/cloud-grows-t32.jpg" width="800" height="800" alt="" loading="lazy">
+          <img src="../assets/img/cloud-grows-t67.jpg" width="800" height="800" alt="" loading="lazy">
+      </div>
+      <figcaption>The cloud grows<span class="muted"><span class="math"><i>t</i><sub>cool,mix</sub>/<i>t</i><sub>cc</sub></span> = 0.01</span></figcaption>
+    </figure>
+  </div>
+  <p class="compare-note">Projected gas density from two of the runs; brighter means denser. Time is measured in eddy turnover times of the turbulence.</p>
+</section>
+
+<div class="measure">
+  <p>Clouds only survived when <span class="math"><i>t</i><sub>cool,mix</sub>/<i>t</i><sub>cc</sub></span> was about 0.01 or less, far below the boundary of about 1 expected from the lower-density case. Denser clouds in hot, turbulent gas have to cool much faster to survive. One likely reason is that the turbulence never dies down, so the cloud never gets a quiet, low-shear region where mixed gas can collect and cool.</p>
+</div>
+
+<figure class="plate">
+  <a href="../assets/img/cold-clouds-figure-full.jpg" aria-label="Open the full figure from the paper">
+    <img src="../assets/img/cold-clouds-panels-bc.jpg" width="2000" height="834" loading="lazy"
+         alt="Left, cold gas mass against time: runs with the fastest cooling grow while the others drop away. Right, every run plotted by Mach number and cooling-to-crushing ratio, with surviving runs in blue below a black boundary line and destroyed runs in red above it.">
+  </a>
+  <figcaption>Left: cold gas mass over time, relative to the starting mass, for runs at Mach number 0.5. Solid lines are 128³ runs, dashed lines 256³. Right: every run, placed by Mach number and <span class="math"><i>t</i><sub>cool,mix</sub>/<i>t</i><sub>cc</sub></span> and coloured by how much cold gas was left at the end. Blue grew, red shrank. The grey line is the boundary expected from <span class="math"><i>χ</i></span> = 100 clouds, the black line the boundary these runs show. <a href="../assets/img/cold-clouds-figure-full.jpg">Open the full figure</a>.</figcaption>
+</figure>
+
+<section aria-labelledby="h-paper" class="measure">
+  <h2 id="h-paper">Paper</h2>
+  <ol class="pubs">
+    <li>
+      <p class="pub-title">Survival of higher overdensity cold gas in a turbulent, multiphase medium</p>
+      <p class="pub-authors"><strong>Ashwin Vergis George</strong>, Hitesh Kishore Das, Max Gronke</p>
+      <p class="meta"><cite>Research Notes of the AAS</cite>, 2025</p>
+      <p class="pub-links"><a href="https://doi.org/10.3847/2515-5172/ae1e79">Journal</a><a href="https://arxiv.org/abs/2507.20962">arXiv</a></p>
+    </li>
+  </ol>
+</section>
+</main>
+<footer class="site-footer"><p>© 2026 Ashwin Vergis George</p></footer>
+</body>
+</html>
