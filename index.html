@@ -1,39 +1,81 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ashwin Vergis George</title>
-<meta name="description" content="Master's student in astrophysics in Potsdam, simulating black-hole jets in galaxy groups and clusters.">
-<meta name="author" content="Ashwin Vergis George">
-<meta name="theme-color" content="#0A1024">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ashwin Vergis George">
-<meta property="og:description" content="Master's student in astrophysics in Potsdam, simulating black-hole jets in galaxy groups and clusters.">
-<!-- Link previews need a full URL here once the site is online, e.g. https://yourdomain/assets/img/og-image.jpg -->
-<meta property="og:image" content="assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css">
-<script>/* Apply the saved day/night choice before the page paints */(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}document.documentElement.setAttribute("data-theme",t)})();</script>
-<script src="js/sky.js" defer></script>
-<script src="js/site.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ashwin V George</title>
+  <meta name="description" content="Ashwin V George, master's student of astrophysics from Potsdam, simulating AGN jets in galaxy groups.">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Ashwin V George">
+  <meta property="og:description" content="Ashwin V George, master's student of astrophysics from Potsdam, simulating AGN jets in galaxy groups.">
+  <meta property="og:type" content="website">
+  <!-- Replace with the full address once the site is online, e.g. https://gregwisenoah.github.io/assets/img/og-image.jpg -->
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/site.js" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-<canvas id="sky" aria-hidden="true"></canvas>
-<div class="sun" aria-hidden="true"></div>
-<header class="site-header site-header--home">
-<nav class="site-nav" aria-label="Main"><a href="about.html">About</a><a href="research/index.html">Research</a><a href="contact.html">Contact</a><button class="theme-toggle" type="button" aria-label="Switch to day mode"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></nav>
-</header>
-<main id="main" class="home">
-  <h1 class="site-name">Ashwin Vergis George</h1>
-  <!-- Placeholder: replace with your own short description -->
-  <p class="intro">I'm a master's student in astrophysics in Potsdam. I simulate the jets of supermassive black holes and the cavities they carve in the hot gas of galaxy groups and clusters.</p>
-</main>
+<body class="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas class="sky" aria-hidden="true"></canvas>
+  <div class="sun" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Switch mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <h1 class="hero-name">Ashwin V George</h1>
+      <p class="tagline">Master's student of astrophysics from Potsdam.</p>
+      <a class="scroll-cue" href="#intro" aria-label="Scroll to the introduction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+    </section>
+
+    <section class="home-intro" id="intro">
+      <p class="lede">I study how the gas in galaxy groups and clusters heats, cools and moves, mostly by simulating it. This site collects my research, a little about me, and the best ways to get in touch.</p>
+
+      <dl class="site-map">
+        <div>
+          <dt><a href="about.html">About</a></dt>
+          <dd>Who I am, what I've worked on so far, and my CV.</dd>
+        </div>
+        <div>
+          <dt><a href="research.html">Research</a></dt>
+          <dd>Simulations of black hole jets in galaxy groups, and of cold gas clouds in the hot intracluster medium.</dd>
+        </div>
+        <div>
+          <dt><a href="contact.html">Contact</a></dt>
+          <dd>Email, GitHub and NASA ADS.</dd>
+        </div>
+      </dl>
+
+      <!-- Status line: edit this sentence whenever things change -->
+      <p class="status"><span class="status-dot" aria-hidden="true"></span><span>Currently, I am finishing up my master's thesis work with Rainer Weinberger.</span></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Ashwin V George</span>
+    <a href="mailto:ageorge@aip.de">ageorge@aip.de</a>
+  </footer>
 </body>
 </html>

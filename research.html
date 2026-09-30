@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Ashwin V George</title>
+  <meta name="description" content="Research by Ashwin V George: simulations of AGN jets in galaxy groups and of cold gas survival in the intracluster medium.">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Research | Ashwin V George">
+  <meta property="og:description" content="Research by Ashwin V George: simulations of AGN jets in galaxy groups and of cold gas survival in the intracluster medium.">
+  <meta property="og:type" content="website">
+  <!-- Replace with the full address once the site is online, e.g. https://gregwisenoah.github.io/assets/img/og-image.jpg -->
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body class="inner">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas class="sky" aria-hidden="true"></canvas>
+  <div class="sun" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="site-name" href="index.html">Ashwin V George</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="about.html">About</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Switch mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <h1>Research</h1>
+
+    <div class="prose">
+      <p class="lede">I'm interested in computational astrophysics: building simulations of astrophysical systems, running them on supercomputers, and taking them apart to understand the physics that drives them.</p>
+      <p>Most of my work uses hydrodynamical simulations of the gas in and around galaxies. The hot gas that fills galaxy groups and clusters radiates energy quickly enough that it should cool, sink towards the centre and form stars at enormous rates. Observations show that mostly doesn't happen. The leading explanation is feedback from active galactic nuclei (AGN): supermassive black holes that feed on gas and launch powerful jets, pumping energy back into their surroundings.</p>
+      <p>Much of the detailed modelling of AGN jets has focused on massive galaxy clusters. I simulate them in galaxy groups, which are smaller, far more common and have shallower gravitational potentials, so a single black hole can reshape the whole halo. Understanding feedback there tells us how galaxies and their surroundings regulate each other across a wide range of masses.</p>
+      <p>The same hot, turbulent gas also contains much colder clumps. Whether they survive, grow or evaporate affects how much cold fuel is left for star formation and for the black hole itself, and that's the question I worked on during my internship.</p>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="projects">
+      <a class="project" href="thesis.html">
+        <img src="assets/img/card-thesis.webp" width="720" height="653" loading="lazy" alt="Density slice of a simulated galaxy group, with dark cavities carved out by a black hole's jets.">
+        <div>
+          <h3>Carving Cavities in the Cosmos</h3>
+          <p class="project-meta">Master's thesis, AIP, 2025–2026</p>
+          <p>How much can a black hole's jets reshape a galaxy group? I simulate resolved AGN jets with AREPO and find that they push gas out of group cores far more effectively than in massive clusters, with jet material reaching the edge of the halo.</p>
+          <span class="project-more">Read about my thesis</span>
+        </div>
+      </a>
+      <a class="project" href="internship.html">
+        <img src="assets/img/card-internship.webp" width="720" height="720" loading="lazy" alt="Projected density of a cold gas cloud that has grown into long filaments in a turbulent medium.">
+        <div>
+          <h3>When do cold clouds survive?</h3>
+          <p class="project-meta">Research internship, MPA Garching, 2025, published in RNAAS</p>
+          <p>Cold clouds a thousand times denser than their surroundings are shredded by turbulence unless they cool fast enough. Across 33 Athena++ simulations, we found they need to cool about ten times faster than the established criterion predicts.</p>
+          <span class="project-more">Read about the internship</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="prose">
+      <h2>Tools</h2>
+      <p>I run simulations with AREPO and Athena++ on HPC clusters managed with SLURM, and do my analysis and visualisation in Python with NumPy, SciPy and Matplotlib.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Ashwin V George</span>
+    <a href="mailto:ageorge@aip.de">ageorge@aip.de</a>
+  </footer>
+</body>
+</html>

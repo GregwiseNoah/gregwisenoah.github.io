@@ -1,125 +1,111 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>About – Ashwin Vergis George</title>
-<meta name="description" content="About Ashwin Vergis George: research, education, schools and CV.">
-<meta name="author" content="Ashwin Vergis George">
-<meta name="theme-color" content="#0A1024">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About – Ashwin Vergis George">
-<meta property="og:description" content="About Ashwin Vergis George: research, education, schools and CV.">
-<!-- Link previews need a full URL here once the site is online, e.g. https://yourdomain/assets/img/og-image.jpg -->
-<meta property="og:image" content="assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css">
-<script>/* Apply the saved day/night choice before the page paints */(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}document.documentElement.setAttribute("data-theme",t)})();</script>
-<script src="js/sky.js" defer></script>
-<script src="js/site.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Ashwin V George</title>
+  <meta name="description" content="About Ashwin V George: master's thesis at AIP, research internship at MPA, and student research assistant at GFZ.">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="About | Ashwin V George">
+  <meta property="og:description" content="About Ashwin V George: master's thesis at AIP, research internship at MPA, and student research assistant at GFZ.">
+  <meta property="og:type" content="website">
+  <!-- Replace with the full address once the site is online, e.g. https://gregwisenoah.github.io/assets/img/og-image.jpg -->
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/site.js" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-<canvas id="sky" aria-hidden="true"></canvas>
-<div class="sun" aria-hidden="true"></div>
-<header class="site-header">
-<a class="site-name" href="index.html">Ashwin Vergis George</a>
-<nav class="site-nav" aria-label="Main"><a href="about.html" aria-current="page">About</a><a href="research/index.html">Research</a><a href="contact.html">Contact</a><button class="theme-toggle" type="button" aria-label="Switch to day mode"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></nav>
-</header>
-<main id="main" class="page">
-<div class="about-intro">
-  <figure class="portrait">
-    <img src="assets/img/ashwin-alps.jpg" width="840" height="1120"
-         alt="Ashwin standing on a forest track, with a snow-covered mountain rising behind the trees.">
-  </figure>
-  <div class="measure">
+<body class="inner">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas class="sky" aria-hidden="true"></canvas>
+  <div class="sun" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="site-name" href="index.html">Ashwin V George</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="about.html" aria-current="page">About</a>
+      <a href="research.html">Research</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Switch mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
     <h1>About</h1>
-    <!-- Draft bio built from your CV: rewrite in your own voice -->
-    <p class="lead">I'm a master's student in astrophysics at the University of Potsdam, finishing my thesis at the Leibniz Institute for Astrophysics Potsdam (AIP).</p>
-    <p>I run hydrodynamic simulations of the jets launched by supermassive black holes, to understand how they heat and stir the hot gas in galaxy groups and clusters.</p>
-    <p>Before that I spent five months at the Max Planck Institute for Astrophysics in Garching, simulating whether cold gas clouds can survive in the turbulent gas of galaxy clusters. That work became my first paper.</p>
-    <p>Alongside my studies I work at the GFZ in Potsdam on auroral imagery and magnetometer data, and help look after instruments at Neumayer Station III in Antarctica. I did my bachelor's in physics at Madras Christian College in Chennai.</p>
-    <p><a class="button" href="assets/cv/Ashwin_Vergis_George_CV.pdf">Download CV (PDF)</a></p>
-  </div>
-</div>
 
-<section aria-labelledby="h-path">
-  <h2 id="h-path">Research and education</h2>
-  <ol class="timeline">
-    <li><p class="when">2025–now</p><div class="what">
-      <h3>Master's thesis research</h3>
-      <p class="where">Leibniz Institute for Astrophysics Potsdam (AIP)</p>
-      <p>Hydrodynamic simulations of resolved AGN jets in galaxy groups and clusters with Arepo, supervised by Dr. Rainer Weinberger. Checked the idealised initial conditions against halos from IllustrisTNG.</p>
-    </div></li>
-    <li><p class="when">2025</p><div class="what">
-      <h3>Research intern</h3>
-      <p class="where">Max Planck Institute for Astrophysics, Garching</p>
-      <p>Athena++ simulations of <a href="research/cold-clouds.html">cold gas clouds in the turbulent intracluster medium</a>, with Dr. Max Gronke and Hitesh Kishore Das. Published in Research Notes of the AAS.</p>
-    </div></li>
-    <li><p class="when">2024–now</p><div class="what">
-      <h3>Student research assistant</h3>
-      <p class="where">GFZ, Potsdam</p>
-      <p>Python pipelines for auroral imagery and magnetometer data, and remote monitoring and technical support for instruments at Neumayer Station III, Antarctica. With Dr. Jürgen Matzka.</p>
-    </div></li>
-    <li><p class="when">2024–2025</p><div class="what">
-      <h3>Student research assistant</h3>
-      <p class="where">Helmholtz-Zentrum Berlin (HZB)</p>
-      <p>GPU-accelerated micromagnetic simulations of spin waves and skyrmions with BORIS, with Dr. Steffen Wittrock, and a GUI for real-time monitoring of radio-frequency signals in superconducting cavities.</p>
-    </div></li>
-    <li><p class="when">2023–now</p><div class="what">
-      <h3>MSc Astrophysics</h3>
-      <p class="where">University of Potsdam</p>
-      <p>Thesis: <a href="research/thesis.html">Carving Cavities in the Cosmos</a>.</p>
-    </div></li>
-    <li><p class="when">2019–2022</p><div class="what">
-      <h3>BSc Physics</h3>
-      <p class="where">Madras Christian College, Chennai</p>
-      <p>Graduated with first class honours.</p>
-    </div></li>
-  </ol>
-</section>
+    <div class="about-intro">
+      <figure class="portrait">
+        <img src="assets/img/ashwin-trail.webp" width="900" height="1200" alt="Ashwin standing on a forest trail, with snow-covered mountains behind him.">
+      </figure>
+      <p class="lede">I'm Ashwin, a master's student in astrophysics at the University of Potsdam. I work in computational astrophysics, using hydrodynamical simulations to understand how gas behaves in and around galaxies.</p>
+      <p>For my master's thesis at the Leibniz Institute for Astrophysics Potsdam (AIP), supervised by Rainer Weinberger, I study how jets from supermassive black holes carve cavities into the hot gas of galaxy groups and clusters. I run these simulations with the moving-mesh code AREPO.</p>
+      <p>From January to May 2025, I was a research intern at the Max Planck Institute for Astrophysics in Garching, working with Max Gronke and Hitesh Kishore Das. I simulated cold gas clouds in a hot, turbulent medium to find out when they survive, and the results became my first paper.</p>
+      <p>Alongside my studies, I work as a student research assistant at GFZ in Potsdam, where I write Python pipelines for auroral imagery and magnetometer data and help keep instruments at Neumayer Station III in Antarctica running from afar.</p>
+      <p>Away from the screen, I like being outdoors in nature and cooking, and I can spend far too long choosing the colours for a plot.</p>
+    </div>
 
-<section aria-labelledby="h-schools">
-  <h2 id="h-schools">Schools and conferences</h2>
-  <ul class="entries">
-    <li><p class="when">2025</p><div>
-      <h3>WE-Heraeus and NARIT Cosmology School: Galaxies and Beyond</h3>
-      <p class="where">National Astronomical Research Institute of Thailand, Chiang Mai</p>
-      <p>Selected participant, with travel funded by the Wilhelm and Else Heraeus Foundation and NARIT.</p>
-    </div></li>
-    <li><p class="when">2025</p><div>
-      <h3>Thinkshop 2025 on feedback in galaxy formation</h3>
-      <p class="where">Leibniz Institute for Astrophysics Potsdam</p>
-      <p>Member of the local organising committee.</p>
-    </div></li>
-    <li><p class="when">2025</p><div>
-      <h3>Jürgen Ehlers Spring School on Gravitational Physics</h3>
-      <p class="where">Max Planck Institute for Gravitational Physics, Potsdam</p>
-      <p>Selected participant.</p>
-    </div></li>
-    <li><p class="when">2024</p><div>
-      <h3>Beamtime at the FERMI free-electron laser</h3>
-      <p class="where">Elettra Sincrotrone Trieste, Italy</p>
-      <p>Data collection, analysis and control of the laser in an experiment on magnon propagation.</p>
-    </div></li>
-    <li><p class="when">2021</p><div>
-      <h3>Online schools</h3>
-      <p class="where">ESCAPE Summer School (LAPP), Code/Astro (Heising-Simons Foundation), ISSAA 2021 (IUCAA)</p>
-      <p>Data science, research software practice, and an introduction to astronomy and astrophysics.</p>
-    </div></li>
-  </ul>
-</section>
+    <h2>Timeline</h2>
+    <ol class="timeline">
+      <li class="tl-item is-milestone">
+        <span class="tl-date">December 2026 (expected)</span>
+        <h3>MSc in Astrophysics</h3>
+        <p class="tl-org">University of Potsdam</p>
+      </li>
+      <li class="tl-item is-now">
+        <span class="tl-date">May 2025 – present</span>
+        <h3>Master's thesis</h3>
+        <p class="tl-org">Leibniz Institute for Astrophysics Potsdam (AIP), supervised by Dr. Rainer Weinberger</p>
+        <p><em>Carving Cavities in the Cosmos.</em> Hydrodynamic simulations of resolved AGN jets in galaxy groups and clusters with AREPO, plus an analysis of IllustrisTNG halos to check that the idealised starting conditions are realistic.</p>
+        <p><a href="thesis.html">More about my thesis</a></p>
+      </li>
+      <li class="tl-item">
+        <span class="tl-date">January – May 2025</span>
+        <h3>Research internship</h3>
+        <p class="tl-org">Max Planck Institute for Astrophysics, Garching, with Dr. Max Gronke and Hitesh Kishore Das</p>
+        <p>Built and ran Athena++ simulations of cold gas clouds in a turbulent, multiphase medium to work out when they survive. Published as a first-author paper in Research Notes of the AAS.</p>
+        <p><a href="internship.html">More about the internship</a></p>
+      </li>
+      <li class="tl-item is-now">
+        <span class="tl-date">December 2024 – present</span>
+        <h3>Student research assistant</h3>
+        <p class="tl-org">GFZ (Deutsches GeoForschungsZentrum), Potsdam, with Dr. Jürgen Matzka</p>
+        <p>Developing and maintaining Python pipelines for auroral imagery and magnetometer data, and providing remote monitoring and technical support for instruments at Neumayer Station III in Antarctica.</p>
+      </li>
+      <li class="tl-item is-milestone">
+        <span class="tl-date">June 2023</span>
+        <h3>Started my MSc in Astrophysics</h3>
+        <p class="tl-org">University of Potsdam</p>
+      </li>
+    </ol>
 
-<section aria-labelledby="h-skills" class="measure">
-  <h2 id="h-skills">Skills</h2>
-  <p>Python, C and C++, Bash, Matlab and LaTeX. The simulation codes Arepo, Athena++ and BORIS, run on high-performance computing clusters.</p>
-</section>
-</main>
-<footer class="site-footer"><p>© 2026 Ashwin Vergis George</p></footer>
+    <h2>Other experience</h2>
+    <div class="prose">
+      <p>Before moving to Germany, I did my BSc in Physics at Madras Christian College in Tamil Nadu, India, graduating with first-class honours in 2022.</p>
+      <p>During my master's I have also worked outside astrophysics. At Helmholtz-Zentrum Berlin, I ran GPU-accelerated micromagnetic simulations of spin waves and skyrmions with Dr. Steffen Wittrock, and built a GUI for monitoring low-frequency radio signals in superconducting cavities. I also joined a beamtime at the FERMI free-electron laser in Trieste, helping with data collection, analysis and running the experiment.</p>
+      <p>I was on the local organising committee for Thinkshop 2025 at AIP, a week-long international conference on feedback in galaxy formation. I've taken part in the WE-Heraeus and NARIT Cosmology School in Chiang Mai, Thailand, and the Jürgen Ehlers Spring School at the Max Planck Institute for Gravitational Physics. The final months of my master's are supported by a DAAD degree completion scholarship.</p>
+      <p>Day to day, I work in Python and C/C++ on HPC clusters, with AREPO and Athena++ as my main simulation codes.</p>
+    </div>
+
+    <p class="cv-link"><a class="pill-link" href="assets/docs/Ashwin_George_CV.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>Download my CV (PDF)</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Ashwin V George</span>
+    <a href="mailto:ageorge@aip.de">ageorge@aip.de</a>
+  </footer>
 </body>
 </html>

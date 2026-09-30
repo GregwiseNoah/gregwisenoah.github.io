@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cold gas survival | Ashwin V George</title>
+  <meta name="description" content="Research internship at MPA Garching: Athena++ simulations of when dense cold gas clouds survive in turbulent hot gas.">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Cold gas survival | Ashwin V George">
+  <meta property="og:description" content="Research internship at MPA Garching: Athena++ simulations of when dense cold gas clouds survive in turbulent hot gas.">
+  <meta property="og:type" content="website">
+  <!-- Replace with the full address once the site is online, e.g. https://gregwisenoah.github.io/assets/img/og-image.jpg -->
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body class="inner">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas class="sky" aria-hidden="true"></canvas>
+  <div class="sun" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="site-name" href="index.html">Ashwin V George</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="about.html">About</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Switch mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <a class="back" href="research.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Research</a>
+    <h1 class="long">Survival of higher overdensity cold gas in a turbulent, multiphase medium</h1>
+    <div class="meta">
+      <p><strong>Research internship</strong>, Max Planck Institute for Astrophysics, Garching, January – May 2025</p>
+      <p>With Hitesh Kishore Das and Dr. Max Gronke</p>
+      <p>Published in Research Notes of the AAS, 2025</p>
+    </div>
+    <div class="link-row">
+      <a class="pill-link" href="https://arxiv.org/abs/2507.20962"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h5v5M19 5l-8 8M17 14v5H5V7h5"/></svg>Read on arXiv</a>
+      <a class="pill-link" href="https://doi.org/10.3847/2515-5172/ae1e79"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h5v5M19 5l-8 8M17 14v5H5V7h5"/></svg>Journal version</a>
+    </div>
+
+    <div class="prose">
+      <h2>The question</h2>
+      <p>The hot gas in galaxy clusters isn't uniform. Mixed into it are clouds of much colder gas, and the gas around them is turbulent. That turbulence tends to tear cold clouds apart and mix them into the hot phase. But where hot and cold gas mix, the mixture can cool quickly and join the cloud, so a cloud can survive and even grow if cooling wins the race.</p>
+      <p>Earlier work (Gronke et al. 2022) found a simple rule for who wins: a cloud survives when the cooling time of the mixed gas, t<sub>cool,mix</sub>, is shorter than the time turbulence needs to crush the cloud, t<sub>cc</sub>. That rule was tested mostly for clouds about 100 times denser than their surroundings, typical of the gas around galaxies. In the hotter intracluster medium, clouds are closer to 1000 times denser, and that regime had barely been explored.</p>
+
+      <h2>What we did</h2>
+      <p>Following the setup of Das &amp; Gronke (2024), I ran 33 three-dimensional Athena++ simulations of cold clouds at 4 × 10<sup>4</sup> K, 1000 times denser than the 4 × 10<sup>7</sup> K turbulent gas around them. I varied the turbulent Mach number between 0.25 and 0.75 and the cloud size, so that t<sub>cool,mix</sub>/t<sub>cc</sub> spans 0.001 to 10, and repeated runs with different random turbulence and at higher resolution to check that the results held up.</p>
+    </div>
+
+    <figure class="cloud-viewer" aria-label="Interactive comparison of a cloud that is destroyed and a cloud that grows">
+      <div class="seg" role="group" aria-label="Choose a cloud">
+        <button type="button" data-case="death" aria-pressed="true">Cloud destroyed</button>
+        <button type="button" data-case="growth" aria-pressed="false">Cloud grows</button>
+      </div>
+      <div class="cv-stage">
+        <div class="cv-frames">
+          <img class="on" data-case="death" data-t="0.2" src="assets/img/cloud-death-0.2.webp" width="900" height="900" alt="Projected density at t over t eddy 0.2: a cloud being mixed away.">
+          <img data-case="death" data-t="3.2" src="assets/img/cloud-death-3.2.webp" width="900" height="900" alt="Projected density at t over t eddy 3.2: a cloud being mixed away.">
+          <img data-case="death" data-t="6.7" src="assets/img/cloud-death-6.7.webp" width="900" height="900" alt="Projected density at t over t eddy 6.7: a cloud being mixed away.">
+          <img data-case="growth" data-t="0.2" src="assets/img/cloud-growth-0.2.webp" width="900" height="900" alt="Projected density at t over t eddy 0.2: a cloud growing into filaments.">
+          <img data-case="growth" data-t="3.2" src="assets/img/cloud-growth-3.2.webp" width="900" height="900" alt="Projected density at t over t eddy 3.2: a cloud growing into filaments.">
+          <img data-case="growth" data-t="6.7" src="assets/img/cloud-growth-6.7.webp" width="900" height="900" alt="Projected density at t over t eddy 6.7: a cloud growing into filaments.">
+        </div>
+        <div class="cv-bar" aria-hidden="true">
+          <div class="cv-bar-grad"></div>
+          <div class="cv-ticks">
+            <span style="bottom:15.4%">100</span>
+            <span style="bottom:30.8%">200</span>
+            <span style="bottom:46.2%">300</span>
+            <span style="bottom:61.5%">400</span>
+            <span style="bottom:76.9%">500</span>
+            <span style="bottom:92.3%">600</span>
+          </div>
+        </div>
+      </div>
+      <div class="cv-time">
+        <button class="cv-play" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg><span class="label">Play</span></button>
+        <input id="cv-time" type="range" min="0" max="2" step="1" value="0" aria-label="Time">
+        <output id="cv-out" for="cv-time">t / t<sub>eddy</sub> = 0.2</output>
+      </div>
+      <figcaption>Projected gas density of a cold cloud in turbulent hot gas at three moments, measured in eddy turnover times. With t<sub>cool,mix</sub>/t<sub>cc</sub> = 1, turbulence wins and the cloud is mixed away. With t<sub>cool,mix</sub>/t<sub>cc</sub> = 0.01, cooling wins and the cold gas grows into long filaments. Density is in units of ρ<sub>hot</sub>L<sub>box</sub>.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>What we found</h2>
+      <p>Clouds only survived when t<sub>cool,mix</sub>/t<sub>cc</sub> ≲ 0.01. That is about ten times lower, one dex, than the boundary found for less dense clouds, so clouds a thousand times denser than their surroundings need to cool much faster to survive. The trend held across Mach numbers, resolutions and random seeds.</p>
+      <p>A likely reason is that turbulence never lets up in these boxes. When a cloud is pushed along by a steady wind, the shear around it drops over time and mixed gas can collect and cool in the calmer tail. In constantly turbulent gas there is no such quiet region, which makes survival harder. Pinning down exactly where the new boundary lies will take further simulations.</p>
+    </div>
+
+    <figure class="full-figure">
+      <a href="assets/img/cloud-figure-full.jpg" aria-label="Open the full figure at full size">
+        <img src="assets/img/cloud-figure.webp" width="1100" height="1081" loading="lazy" alt="Figure 1 of the paper: density projections of the two clouds, cold gas mass over time for each run, and a map of which runs survived by Mach number and cooling ratio.">
+      </a>
+      <figcaption>The full figure from the paper. (a) The two clouds above, side by side. (b) Cold gas mass over time for different values of t<sub>cool,mix</sub>/t<sub>cc</sub>; solid and dashed lines are two resolutions. (c) Every run by Mach number and t<sub>cool,mix</sub>/t<sub>cc</sub>, coloured by how much cold gas it ended with. The light grey line is the expected survival boundary, the dark grey line the one we found. Select the figure to open it at full size.</figcaption>
+    </figure>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Ashwin V George</span>
+    <a href="mailto:ageorge@aip.de">ageorge@aip.de</a>
+  </footer>
+</body>
+</html>

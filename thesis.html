@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carving Cavities in the Cosmos | Ashwin V George</title>
+  <meta name="description" content="Master's thesis by Ashwin V George: simulations of AGN jets in galaxy groups and clusters with AREPO.">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Carving Cavities in the Cosmos | Ashwin V George">
+  <meta property="og:description" content="Master's thesis by Ashwin V George: simulations of AGN jets in galaxy groups and clusters with AREPO.">
+  <meta property="og:type" content="website">
+  <!-- Replace with the full address once the site is online, e.g. https://gregwisenoah.github.io/assets/img/og-image.jpg -->
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body class="inner">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas class="sky" aria-hidden="true"></canvas>
+  <div class="sun" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="site-name" href="index.html">Ashwin V George</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="about.html">About</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Switch mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <a class="back" href="research.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Research</a>
+    <h1>Carving Cavities in the Cosmos</h1>
+    <p class="subtitle">Simulations of AGN jets in galaxy groups and clusters</p>
+    <div class="meta">
+      <p><strong>Master's thesis</strong>, University of Potsdam, 2025–2026</p>
+      <p>Carried out at the Leibniz Institute for Astrophysics Potsdam (AIP)</p>
+      <p>Supervised by Dr. Rainer Weinberger</p>
+    </div>
+
+    <div class="prose">
+      <h2>The idea</h2>
+      <p>Galaxy groups and clusters are the most massive collapsed structures in the Universe. Their cores are filled with hot gas that should cool quickly and form large amounts of cold gas and stars, yet observations find far less of both. A leading explanation is that jets from supermassive black holes, powered by the gas they accrete, put energy back into the halo and hold off the cooling.</p>
+      <p>Most earlier simulations of this process looked at galaxy clusters. I focus on galaxy groups. I run hydrodynamic simulations of resolved jets with the moving-mesh code AREPO, using the jet model described in Weinberger et al. (2023), and compare them with a few cluster-mass runs. Across the suite I vary the jet power, the jet density, the amount of gas in the halo, how the energy is injected and the halo mass. Some runs launch a single outburst; others are self-regulated, with the jet power set by Bondi accretion onto the black hole, so the jets respond to the gas cooling around them.</p>
+      <p>To check that the idealised halos are realistic starting points, I compared them with halos from the IllustrisTNG cosmological simulations.</p>
+    </div>
+
+    <figure class="video">
+      <!-- Paste the YouTube link between the quotes in data-youtube="" and the still becomes a link to the video. -->
+      <a class="video-link" data-youtube="" aria-label="Watch the jet simulation on YouTube">
+        <img src="assets/img/jet-poster.webp" width="1400" height="1270" alt="Gas density slice through a simulated galaxy group at 406 million years, with dark jet-inflated cavities on either side of the centre.">
+        <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg></span>
+      </a>
+      <figcaption>Gas density in a slice through the fiducial self-regulated galaxy group run, 406 Myr in. <span class="video-status"></span></figcaption>
+    </figure>
+
+    <h2>What I found</h2>
+    <div class="findings">
+      <div class="finding">
+        <h3>The density contrast shapes the jet</h3>
+        <p>The lighter a jet is compared with the gas around it, the more of that gas it drags along, the sooner it slows down and the shorter it travels. Heavier jets drive narrow, elongated cavities, and in gas-poor halos the lower pressure lets cavities travel further and inflate much more.</p>
+      </div>
+      <div class="finding">
+        <h3>Gentler jets go further</h3>
+        <p>For the same total energy, lower-power jets move through the halo more efficiently. Powerful jets drive strong shocks and lose much of their kinetic energy heating the gas in front of them. Even the self-regulated runs, which are weaker on average than the single outbursts, carry jet material out to the virial radius.</p>
+      </div>
+      <div class="finding">
+        <h3>The black hole regulates itself</h3>
+        <p>In the self-regulated group runs, the jet power swings between 10<sup>43</sup> and 10<sup>45</sup> erg/s in response to gas cooling onto the centre. Over time the jets lower the central density and pressure, heat the gas and stir up turbulence. Within the inner 50 kpc, the gas mass drops to about 25% of its starting value in the fiducial run, and the star formation rate falls.</p>
+      </div>
+      <div class="finding">
+        <h3>Groups feel it far more than clusters</h3>
+        <p>The same jet, with the same power and duration, displaces much more gas in a galaxy group than in a cluster. A cluster's deeper gravitational potential and larger gas mass absorb the energy, and the jet loses most of it simply pushing its way outwards.</p>
+      </div>
+      <div class="finding">
+        <h3>One outburst can stand in for many</h3>
+        <p>A single jet outburst with a carefully chosen power produces cavities of similar shape, size and reach to a full self-regulated run, which makes it a useful stand-in when the self-regulated setup isn't needed.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>What comes next</h2>
+      <p>These halos are idealised and isolated. Placing the jets in a cosmological setting would add gas flowing in from the cosmic web and mergers, which also disturb halos over time. Running the self-regulated simulations for longer would capture more cycles of the jet switching on and off, and adding magnetic fields and cosmic rays would bring in physics that changes how jets stay collimated and where they deposit their energy.</p>
+
+      <h2>Further reading</h2>
+    </div>
+    <ul class="refs">
+      <li>Weinberger, R., et al. (2023). Active galactic nucleus jet feedback in hydrostatic haloes. <em>MNRAS</em>, 523, 1104. <a href="https://doi.org/10.1093/mnras/stad1396">doi:10.1093/mnras/stad1396</a></li>
+      <li>Ehlert, K., et al. (2023). Self-regulated AGN feedback of light jets in cool-core galaxy clusters. <em>MNRAS</em>, 518, 4622. <a href="https://doi.org/10.1093/mnras/stac2860">doi:10.1093/mnras/stac2860</a></li>
+      <li>Eckert, D., et al. (2024). Galaxy groups as the ultimate probe of AGN feedback. <em>Galaxies</em>, 12, 24. <a href="https://doi.org/10.3390/galaxies12030024">doi:10.3390/galaxies12030024</a></li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Ashwin V George</span>
+    <a href="mailto:ageorge@aip.de">ageorge@aip.de</a>
+  </footer>
+</body>
+</html>
