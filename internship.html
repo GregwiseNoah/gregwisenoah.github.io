@@ -49,7 +49,7 @@
     <h1 class="long">Survival of higher overdensity cold gas in a turbulent, multiphase medium</h1>
     <div class="meta">
       <p><strong>Research internship</strong>, Max Planck Institute for Astrophysics, Garching, January – May 2025</p>
-      <p>With Hitesh Kishore Das and Dr. Max Gronke</p>
+      <p>With Dr. Hitesh Kishore Das and Dr. Max Gronke</p>
       <p>Published in Research Notes of the AAS, 2025</p>
     </div>
     <div class="link-row">
@@ -58,12 +58,11 @@
     </div>
 
     <div class="prose">
-      <h2>The question</h2>
-      <p>The hot gas in galaxy clusters isn't uniform. Mixed into it are clouds of much colder gas, and the gas around them is turbulent. That turbulence tends to tear cold clouds apart and mix them into the hot phase. But where hot and cold gas mix, the mixture can cool quickly and join the cloud, so a cloud can survive and even grow if cooling wins the race.</p>
-      <p>Earlier work (Gronke et al. 2022) found a simple rule for who wins: a cloud survives when the cooling time of the mixed gas, t<sub>cool,mix</sub>, is shorter than the time turbulence needs to crush the cloud, t<sub>cc</sub>. That rule was tested mostly for clouds about 100 times denser than their surroundings, typical of the gas around galaxies. In the hotter intracluster medium, clouds are closer to 1000 times denser, and that regime had barely been explored.</p>
+      <h2>The problem</h2>
+      <p> The ambient gas (ICM) in the galaxy clusters sits at very high temperatures. However, thermal instabilities can form in the form of cold gas clouds sitting in this hot medium. The turbulence in the hot phase can tears these colds apart if the cooling timescale (t<sub>cool,mix</sub>) of the hot gas is short than the time turbulence need to crush this cloud(t<sub>cc</sub>).</p>
 
       <h2>What we did</h2>
-      <p>Following the setup of Das &amp; Gronke (2024), I ran 33 three-dimensional Athena++ simulations of cold clouds at 4 × 10<sup>4</sup> K, 1000 times denser than the 4 × 10<sup>7</sup> K turbulent gas around them. I varied the turbulent Mach number between 0.25 and 0.75 and the cloud size, so that t<sub>cool,mix</sub>/t<sub>cc</sub> spans 0.001 to 10, and repeated runs with different random turbulence and at higher resolution to check that the results held up.</p>
+      <p>Following the setup of Das &amp; Gronke (2024), I ran 33 three-dimensional Athena++ simulations of cold clouds that have an overdensity of 1000  compared to the ICM. I varied the turbulent Mach number between 0.25 and 0.75 and the cloud size, so that t<sub>cool,mix</sub>/t<sub>cc</sub> spans 0.001 to 10, and repeated runs with different random turbulence and at higher resolution to check that the results held up.</p>
     </div>
 
     <figure class="cloud-viewer" aria-label="Interactive comparison of a cloud that is destroyed and a cloud that grows">
@@ -103,7 +102,7 @@
     <div class="prose">
       <h2>What we found</h2>
       <p>Clouds only survived when t<sub>cool,mix</sub>/t<sub>cc</sub> ≲ 0.01. That is about ten times lower, one dex, than the boundary found for less dense clouds, so clouds a thousand times denser than their surroundings need to cool much faster to survive. The trend held across Mach numbers, resolutions and random seeds.</p>
-      <p>A likely reason is that turbulence never lets up in these boxes. When a cloud is pushed along by a steady wind, the shear around it drops over time and mixed gas can collect and cool in the calmer tail. In constantly turbulent gas there is no such quiet region, which makes survival harder. Pinning down exactly where the new boundary lies will take further simulations.</p>
+      <p>A likely reason is that turbulence never lets up in these boxes. When a cloud is pushed along by a steady wind, the shear around it drops over time and mixed gas can collect and cool in the calmer tail. In constantly turbulent gas there is no such quiet region, which makes survival harder.</p>
     </div>
 
     <figure class="full-figure">
