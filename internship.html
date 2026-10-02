@@ -59,46 +59,11 @@
 
     <div class="prose">
       <h2>The problem</h2>
-      <p> The ambient gas (ICM) in the galaxy clusters sits at very high temperatures. However, thermal instabilities can form in the form of cold gas clouds sitting in this hot medium. The turbulence in the hot phase can tears these colds apart if the cooling timescale (t<sub>cool,mix</sub>) of the hot gas is short than the time turbulence need to crush this cloud(t<sub>cc</sub>).</p>
+      <p> The ambient gas (ICM) in the galaxy clusters sits at very high temperatures. Thermal instabilities can produce cold gas clouds sitting in this hot medium. The turbulence in the hot phase can tear these clouds apart if the cooling timescale (t<sub>cool,mix</sub>) of the mixed (hot and cold) gas is longer than the time turbulence needs to crush this cloud (t<sub>cc</sub>).</p>
 
       <h2>What we did</h2>
       <p>Following the setup of Das &amp; Gronke (2024), I ran 33 three-dimensional Athena++ simulations of cold clouds that have an overdensity of 1000  compared to the ICM. I varied the turbulent Mach number between 0.25 and 0.75 and the cloud size, so that t<sub>cool,mix</sub>/t<sub>cc</sub> spans 0.001 to 10, and repeated runs with different random turbulence and at higher resolution to check that the results held up.</p>
     </div>
-
-    <figure class="cloud-viewer" aria-label="Interactive comparison of a cloud that is destroyed and a cloud that grows">
-      <div class="seg" role="group" aria-label="Choose a cloud">
-        <button type="button" data-case="death" aria-pressed="true">Cloud destroyed</button>
-        <button type="button" data-case="growth" aria-pressed="false">Cloud grows</button>
-      </div>
-      <div class="cv-stage">
-        <div class="cv-frames">
-          <img class="on" data-case="death" data-t="0.2" src="assets/img/cloud-death-0.2.webp" width="900" height="900" alt="Projected density at t over t eddy 0.2: a cloud being mixed away.">
-          <img data-case="death" data-t="3.2" src="assets/img/cloud-death-3.2.webp" width="900" height="900" alt="Projected density at t over t eddy 3.2: a cloud being mixed away.">
-          <img data-case="death" data-t="6.7" src="assets/img/cloud-death-6.7.webp" width="900" height="900" alt="Projected density at t over t eddy 6.7: a cloud being mixed away.">
-          <img data-case="growth" data-t="0.2" src="assets/img/cloud-growth-0.2.webp" width="900" height="900" alt="Projected density at t over t eddy 0.2: a cloud growing into filaments.">
-          <img data-case="growth" data-t="3.2" src="assets/img/cloud-growth-3.2.webp" width="900" height="900" alt="Projected density at t over t eddy 3.2: a cloud growing into filaments.">
-          <img data-case="growth" data-t="6.7" src="assets/img/cloud-growth-6.7.webp" width="900" height="900" alt="Projected density at t over t eddy 6.7: a cloud growing into filaments.">
-        </div>
-        <div class="cv-bar" aria-hidden="true">
-          <div class="cv-bar-grad"></div>
-          <div class="cv-ticks">
-            <span style="bottom:15.4%">100</span>
-            <span style="bottom:30.8%">200</span>
-            <span style="bottom:46.2%">300</span>
-            <span style="bottom:61.5%">400</span>
-            <span style="bottom:76.9%">500</span>
-            <span style="bottom:92.3%">600</span>
-          </div>
-        </div>
-      </div>
-      <div class="cv-time">
-        <button class="cv-play" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg><span class="label">Play</span></button>
-        <input id="cv-time" type="range" min="0" max="2" step="1" value="0" aria-label="Time">
-        <output id="cv-out" for="cv-time">t / t<sub>eddy</sub> = 0.2</output>
-      </div>
-      <figcaption>Projected gas density of a cold cloud in turbulent hot gas at three moments, measured in eddy turnover times. With t<sub>cool,mix</sub>/t<sub>cc</sub> = 1, turbulence wins and the cloud is mixed away. With t<sub>cool,mix</sub>/t<sub>cc</sub> = 0.01, cooling wins and the cold gas grows into long filaments. Density is in units of ρ<sub>hot</sub>L<sub>box</sub>.</figcaption>
-    </figure>
-
     <div class="prose">
       <h2>What we found</h2>
       <p>Clouds only survived when t<sub>cool,mix</sub>/t<sub>cc</sub> ≲ 0.01. That is about ten times lower, one dex, than the boundary found for less dense clouds, so clouds a thousand times denser than their surroundings need to cool much faster to survive. The trend held across Mach numbers, resolutions and random seeds.</p>
@@ -109,7 +74,7 @@
       <a href="assets/img/cloud-figure-full.jpg" aria-label="Open the full figure at full size">
         <img src="assets/img/cloud-figure.webp" width="1100" height="1081" loading="lazy" alt="Figure 1 of the paper: density projections of the two clouds, cold gas mass over time for each run, and a map of which runs survived by Mach number and cooling ratio.">
       </a>
-      <figcaption>The full figure from the paper. (a) The two clouds above, side by side. (b) Cold gas mass over time for different values of t<sub>cool,mix</sub>/t<sub>cc</sub>; solid and dashed lines are two resolutions. (c) Every run by Mach number and t<sub>cool,mix</sub>/t<sub>cc</sub>, coloured by how much cold gas it ended with. The light grey line is the expected survival boundary, the dark grey line the one we found. Select the figure to open it at full size.</figcaption>
+      <figcaption>The full figure from the paper. (a) Density projections of; above: cloud destruction, below: cloud growth.(b) Cold gas mass over time for different values of t<sub>cool,mix</sub>/t<sub>cc</sub>; solid and dashed lines are two resolutions. (c) Every run by Mach number and t<sub>cool,mix</sub>/t<sub>cc</sub>, coloured by how much cold gas it ended with. The light grey line is the expected survival boundary, the dark grey line the one we found. Select the figure to open it at full size.</figcaption>
     </figure>
   </main>
 
